@@ -45,3 +45,18 @@ nav a {
     color: black;
 }
 
+nav a:hover {
+    color: red;
+}
+nav li:last-child {
+    border-radius: 4px;
+
+}
+
+nav li:last-child a {
+    color: #4275f5;
+}
+
+nav li.signin {
+    margin-left: auto;
+}

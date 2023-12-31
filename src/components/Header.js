@@ -15,9 +15,8 @@ const Header = () => {
                     <nav>
                         <ul>
                             <li><a href="#">Home</a></li>
-                            <li><a href="#">Events</a></li>
-                            <li><a href="#">Resources</a></li>
-                            <li><a href="#">Questions</a></li>
+                            <li><a href="#">About Us</a></li>
+                            <li className="signin"><a href="#">Sign In</a></li>
                         </ul>
                     </nav>
                 </header>
