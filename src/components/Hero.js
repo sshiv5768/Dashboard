@@ -4,14 +4,13 @@ import heroImg from '../images/hero-bg-img.png'
 
 const Content = () => {
   return (
-    <section className="hero-container">
-        <div className="hero" style={{ backgroundImage: `url(${heroImg})`}}>
+    <div className="hero-image">
+      <div className="hero-text">
       <h2> Socialize with the Community</h2>{" "}
       <p> Discover Awesome Community Events Happing near You! </p>{" "}
-      {/* Add any additional content or components for your hero section */}{" "}
+      <button className="register-button">Register</button>
+      </div>
     </div>
-    </section>
-    
   );
 };
 
