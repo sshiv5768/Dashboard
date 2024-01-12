@@ -1,9 +1,10 @@
 import React from 'react';
 import htf from '../images/2-2.png'
 
-const EventCard = ({ eventName, eventDescription, eventImage}) => {
-    const handleButtonClick = () => {
-        window.location.href = 'https://hackthisfall.tech/';
+const EventCard = ({ eventName, eventDescription, eventImage, eventLink}) => {
+    
+  const handleButtonClick = () => {
+        window.location.href = eventLink;
     };
 
   return (
@@ -12,8 +13,8 @@ const EventCard = ({ eventName, eventDescription, eventImage}) => {
   <div
     className="relative h-56 mx-4 -mt-6 overflow-hidden text-white shadow-lg bg-clip-border rounded-xl bg-blue-gray-500 shadow-blue-gray-500/40">
     <img
-      src={htf}
-      alt="card-image" />
+      src={eventImage}
+      alt="card" />
   </div>
   <div className="p-6">
     <h5 className="block mb-2 font-sans text-xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
