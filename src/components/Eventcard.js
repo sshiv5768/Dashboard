@@ -1,26 +1,39 @@
-import React from "react";
-import '../style/Eventcard.css';
+import React from 'react';
+import htf from '../images/2-2.png'
 
+const EventCard = ({ eventName, eventDescription, eventImage}) => {
+    const handleButtonClick = () => {
+        window.location.href = 'https://hackthisfall.tech/';
+    };
 
-const Eventcard = ({ event }) => {
-    
-    return (
-        <div class="event-card">
-            <div class="event-image">
-                <img src={event.image} alt="Event Image" />
-            </div>
-            <div class="event-details">
-                <h3 class="event-title">{event.title}</h3>
-                <p class="event-date">Date: {event.date}</p>
-                <p class="event-category">Category: {event.category}</p>
-                <p class="event-location">Location: {event.location}</p>
-                <p class="event-time">Time: {event.time}</p>
-                <p class="event-status">Status: {event.status}</p>
-                <a href={event.website} class="event-link">Learn More</a>
-            </div>
-        </div>
-
-    )
+  return (
+    <div className='flex justify-center'>
+     <div className="relative flex flex-col mt-6 text-gray-700 bg-white shadow-md bg-clip-border rounded-xl w-96">
+  <div
+    className="relative h-56 mx-4 -mt-6 overflow-hidden text-white shadow-lg bg-clip-border rounded-xl bg-blue-gray-500 shadow-blue-gray-500/40">
+    <img
+      src={htf}
+      alt="card-image" />
+  </div>
+  <div className="p-6">
+    <h5 className="block mb-2 font-sans text-xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
+      {eventName}
+    </h5>
+    <p className="block font-sans text-base antialiased font-light leading-relaxed text-inherit">
+    {eventDescription}
+    </p>
+  </div>
+  <div className="p-6 pt-0">
+    <button
+      className="align-middle select-none font-sans font-bold text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 px-6 rounded-lg bg-gray-900 text-white shadow-md shadow-gray-900/10 hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none"
+      type="button" onClick={handleButtonClick}>
+      Register Now
+    </button>
+  </div>
+</div>
+    </div>
+     
+  );
 }
 
-export default Eventcard;
+export default EventCard;

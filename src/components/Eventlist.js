@@ -1,41 +1,20 @@
-import React from "react";
-import '../style/Header.css'
-import Eventcard from "./Eventcard";
-import fastnroadshow from "../images/fastnroadshow.webp"
-import flowhackathon from "../images/flowhackathon.webp"
+import EventCard from "./Eventcard";
+export default function EventList() {
 
-const Eventlist = ()=>{
-    const events = [
+    const eventData = [
         {
-            title: 'fastn Roadshow Ahmedabad',
-            image: fastnroadshow,
-            date: 'Saturday, 8 July',
-            category: 'Web3 Meetup',
-            location: '7Span',
-            time: '11:30 AM to 6:00PM',
-            website: 'https://lu.ma/fastn-roadshow-ahmedabad',
-            status: "Fresh"
+            eventName: "Hack This Fall 2024",
+            eventDescription: "Dive into innovation at Hack This Fall Hackathon, where collaboration meets creativity! Join us in cultivating a beginner-friendly space for diverse minds to unite, ideate, and bring meaningful projects to life – experience the true essence of a hackathon journey.",
+            eventImage: "../images/2-2.png"
         },
-        {
-            title: 'Flow Hackathon Season 2',
-            image: flowhackathon,
-            date: 'Jun 15 - Jul 16, 2023',
-            category: 'Web3 Hackathon',
-            location: 'Online',
-            time: 'None',
-            website: 'https://flow-hackathon-s2.devfolio.co/',
-            status: "Fresh"
-        }
 
     ]
-    return (
-        <div className="event-list">
-            {events.map((event, index)=> (
-                <Eventcard key={index} event={event}/>
-            ))}
-        </div>
-    );
 
+  return (
+    <div className="flex justify-center overflow-x-auto p-4">
+    {eventData.map((event, index) => (
+        <EventCard key={index} {...event}/>
+    ))}
+    </div>
+  );
 }
-
-export default Eventlist;
