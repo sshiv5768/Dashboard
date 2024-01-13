@@ -20,9 +20,11 @@ export default function EventList() {
     ]
 
   return (
-    <div className="flex justify-center overflow-x-auto p-4">
+    <div className="flex justify-center flex-wrap overflow-x-auto overflow-y-auto p-4 ">
     {eventData.map((event, index) => (
-        <EventCard key={index} {...event}/>
+      <div key={index} className="mx-2 my-2">
+        <EventCard key={index} {...event}/> 
+      </div>  
     ))}
     </div>
   );
