@@ -18,12 +18,14 @@ jobs:
       run: ls
     - name: Build the Docker image
       run: docker build -t dashboard:$(date +%s) .
+    - name: List the Docker images
+      run: docker images
     - name: Docker Login
       env: 
         DOCKER_USER: ${{secrets.DOCKER_USERNAME}}
         DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD}}
       run: docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
     - name: Push to DockerHub
-      run: docker push sshiv6353/dashboard
+      run: docker push dashboard:$(date +%s)
       
       
