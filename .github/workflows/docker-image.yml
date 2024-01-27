@@ -17,8 +17,8 @@ jobs:
     - name: Directory Structure
       run: ls
     - name: Build the Docker image
-      run: docker build -t dashboard:1.0 .
-    - name: List the Docker images
+      run: docker build -t sshiv6353/dashboard .
+    - name: List the Dockerfile
       run: docker images
     - name: Docker Login
       env: 
@@ -26,6 +26,6 @@ jobs:
         DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD}}
       run: docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
     - name: Push to DockerHub
-      run: docker push dashboard:1.0
+      run: docker push sshiv6353/dashboard
       
       
